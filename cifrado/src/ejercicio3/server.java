@@ -37,7 +37,7 @@ public class server {
 
             try (Socket socket = server.accept();
                  BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                 PrintWriter pr = new PrintWriter(socket.getOutputStream(), true)) {
+                 ) {
 
                 System.out.println("Cliente conectado exitosamente");
 

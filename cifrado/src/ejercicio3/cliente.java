@@ -11,6 +11,7 @@ import java.security.PublicKey;
 import java.util.Base64;
 
 import javax.crypto.Cipher;
+import javax.swing.JOptionPane;
 
 public class cliente {
     public static void main(String[] args) {
@@ -27,7 +28,7 @@ public class cliente {
             PublicKey publicKey = leerClavePublica("publicKey.txt");
 
             // Mensaje a enviar
-            String mensaje = "Hola, Servidor!";
+            String mensaje = JOptionPane.showInputDialog("Introduce el mensaje");
             String mensajeCifrado = encriptar(mensaje, publicKey);
 
             System.out.println("Mensaje cifrado enviado: " + mensajeCifrado);
